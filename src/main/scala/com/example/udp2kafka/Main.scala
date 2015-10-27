@@ -1,7 +1,6 @@
 package com.example.udp2kafka
 
-import scala.collection.JavaConverters._
-
+import collection.convert.wrapAll._
 import akka.actor.{ ActorRef, ActorSystem, Props, Actor }
 import akka.io.{ IO, Udp }
 
@@ -14,7 +13,7 @@ object Main extends App {
     val system = ActorSystem("udp2kafka")
 
     val kafkaProps = new java.util.Properties
-    system.settings.config.withOnlyPath("kafka").entrySet.asScala.foreach{e =>
+    system.settings.config.withOnlyPath("kafka").entrySet.foreach{e =>
       kafkaProps.put(e.getKey.substring(6), e.getValue.unwrapped)
     }
 
