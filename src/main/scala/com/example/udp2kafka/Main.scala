@@ -10,15 +10,15 @@ import kafka.producer.ProducerConfig
 
 object Main extends App {
 
-    val system = ActorSystem("udp2kafka")
+  val system = ActorSystem("udp2kafka")
 
-    val kafkaProps = new java.util.Properties
-    system.settings.config.withOnlyPath("kafka").entrySet.foreach{e =>
-      kafkaProps.put(e.getKey.substring(6), e.getValue.unwrapped)
-    }
+  val kafkaProps = new java.util.Properties
+  system.settings.config.withOnlyPath("kafka").entrySet.foreach{e =>
+    kafkaProps.put(e.getKey.substring(6), e.getValue.unwrapped)
+  }
 
-    val kafkaProducer = system.actorOf(Props(new Packager(kafkaProps)))
-    val udpListener = system.actorOf(Props(new Listener(kafkaProducer)))
+  val kafkaProducer = system.actorOf(Props(new Packager(kafkaProps)))
+  val udpListener = system.actorOf(Props(new Listener(kafkaProducer)))
 }
 
 class Listener(nextActor: ActorRef) extends Actor {
