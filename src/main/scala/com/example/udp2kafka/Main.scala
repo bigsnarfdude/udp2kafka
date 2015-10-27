@@ -17,7 +17,7 @@ object Main extends App {
       kafkaProps.put(e.getKey.substring(6), e.getValue.unwrapped)
     }
 
-    val kafkaProducer = system.actorOf(Props(new Generator(kafkaProps)))
+    val kafkaProducer = system.actorOf(Props(new Packager(kafkaProps)))
     val udpListener = system.actorOf(Props(new Listener(kafkaProducer)))
 }
 
@@ -43,7 +43,7 @@ class Listener(nextActor: ActorRef) extends Actor {
   }
 }
 
-class Generator(kafkaProps: java.util.Properties) extends Actor {
+class Packager(kafkaProps: java.util.Properties) extends Actor {
   val producer = new Producer[Integer, String](new ProducerConfig(kafkaProps))
   val topic = context.system.settings.config.getString("topic")
 
