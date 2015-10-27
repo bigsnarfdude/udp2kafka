@@ -50,8 +50,6 @@ and run it with:
     java -Dconfig.file=config.conf -jar udp2kafka-assembly-0.1.jar
     
 
-Project uses [logback](http://logback.qos.ch/) for logging and default place for log files is `logs/` under cwd. If you'd like to change that you should provide another `logback.xml` to classpath.
-
 ## Develop
 
 `sbt run`
