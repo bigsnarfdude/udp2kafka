@@ -1,7 +1,3 @@
-# udp2kafka
-simple UDP service using Akka and sending to Kafka Topic
-
-
 # UDP2Kafka
 
 Sends any message received from a specified UDP port 9000 to a named [kafka](http://kafka.apache.org/) topic. I send metrics data via UDP to Kafka for processing.
