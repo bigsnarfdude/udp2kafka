@@ -1,7 +1,7 @@
 package com.example.udp2kafka
 
 import collection.convert.wrapAll._
-import akka.actor.{ ActorRef, ActorSystem, Props, Actor }
+import akka.actor.{ ActorLogging, ActorRef, ActorSystem, Props, Actor }
 import akka.io.{ IO, Udp }
 
 import kafka.javaapi.producer.Producer
@@ -43,12 +43,13 @@ class Listener(nextActor: ActorRef) extends Actor {
   }
 }
 
-class Packager(kafkaProps: java.util.Properties) extends Actor {
+class Packager(kafkaProps: java.util.Properties) extends Actor with ActorLogging {
   val producer = new Producer[Integer, String](new ProducerConfig(kafkaProps))
   val topic = context.system.settings.config.getString("topic")
 
   def receive = {
     case message: String => 
+      log.info("Sending kafka {}", message)
       producer.send(new KeyedMessage[Integer, String](topic, message))
   }
 }

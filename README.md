@@ -11,6 +11,9 @@ Related Projects:
 Inspired by:
 [https://github.com/bigsnarfdude/simmer](https://github.com/bigsnarfdude/simmer)
 
+## Get Kafka up and going and create "metrics" topic
+[https://kafka.apache.org/documentation.html#introduction](https://kafka.apache.org/documentation.html#introduction)
+
 ## Running Details
 
 UDP listener is set up on port `9000`.
