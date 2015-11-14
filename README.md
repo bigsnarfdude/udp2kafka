@@ -2,6 +2,11 @@
 
 Simple UDP service using Scala Akka that can recieve any UDP message received from UDP port 9000.  The service sends the UDP message to a named [Apache Kafka](http://kafka.apache.org/) topic. 
 
+####
+Apache Kafka Quickstart
+http://kafka.apache.org/08/quickstart.html
+
+
 I'm using this service as part of Project Rehydrate to send metrics data via UDP to Kafka for processing and rehydration of Twitter Algebird HLLs in a Scala Akka HTTP REST API.
 
 Related Projects:
