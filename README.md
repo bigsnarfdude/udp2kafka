@@ -66,6 +66,10 @@ and run it with:
 
 `sbt run`
     
-## License
 
-See attached project Licence in repo.
+## Author and Licence
+If you have any questions regarding this project contact:
+
+@bigsnarfdude on Twitter
+
+For licensing info see LICENSE file in project's root directory.
