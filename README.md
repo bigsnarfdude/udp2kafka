@@ -10,8 +10,9 @@ Apache Kafka Quickstart:
 I'm using this service as part of Project Rehydrate to send metrics data via UDP to Kafka for processing and rehydration of Twitter Algebird HLLs in a Scala Akka HTTP REST API.
 
 Related Projects:
+
 [https://github.com/bigsnarfdude/addifier](https://github.com/bigsnarfdude/addifier)
-[https://github.com/bigsnarfdude/simmer](https://github.com/bigsnarfdude/akka-http-algebird)
+[https://github.com/bigsnarfdude/akka-http-algebird](https://github.com/bigsnarfdude/akka-http-algebird)
 
 Inspired by:
 [https://github.com/bigsnarfdude/simmer](https://github.com/bigsnarfdude/simmer)
