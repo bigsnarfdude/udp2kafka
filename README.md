@@ -12,12 +12,15 @@ I'm using this service as part of Project Rehydrate to send metrics data via UDP
 Related Projects:
 
 [https://github.com/bigsnarfdude/addifier](https://github.com/bigsnarfdude/addifier)
+
 [https://github.com/bigsnarfdude/akka-http-algebird](https://github.com/bigsnarfdude/akka-http-algebird)
 
 Inspired by:
+
 [https://github.com/bigsnarfdude/simmer](https://github.com/bigsnarfdude/simmer)
 
 ## Get Kafka up and going and create "metrics" topic
+
 [https://kafka.apache.org/documentation.html#introduction](https://kafka.apache.org/documentation.html#introduction)
 
 ## Running Details
