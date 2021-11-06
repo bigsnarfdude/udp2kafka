@@ -22,6 +22,8 @@ Inspired by:
 
 ## Get Kafka up and going and create "metrics" topic
 
+.
+
 [https://kafka.apache.org/documentation.html#introduction](https://kafka.apache.org/documentation.html#introduction)
 
 ## Running Details
